@@ -30,21 +30,24 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.listViewForVacancies = new System.Windows.Forms.ListView();
             this.label2 = new System.Windows.Forms.Label();
+            this.listViewForApplicants = new System.Windows.Forms.ListView();
             this.label3 = new System.Windows.Forms.Label();
-            this.richTextBoxForEnterVacancy = new System.Windows.Forms.RichTextBox();
-            this.richTextBoxForEnterApplicant = new System.Windows.Forms.RichTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.richTextBoxForCompareVacancy = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxForCompareApplicant = new System.Windows.Forms.RichTextBox();
+            this.pictureBoxForComparison = new System.Windows.Forms.PictureBox();
             this.labelForVacancy = new System.Windows.Forms.Label();
             this.labelForApplicant = new System.Windows.Forms.Label();
             this.textBoxForPromptUser = new System.Windows.Forms.TextBox();
-            this.listViewForVacancies = new System.Windows.Forms.ListView();
-            this.listViewForApplicants = new System.Windows.Forms.ListView();
+            this.buttonStartProcess = new System.Windows.Forms.Button();
+            this.richTextBoxForEnterVacancy = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxForEnterApplicant = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxForComparison)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -75,91 +78,6 @@
             this.splitContainer1.SplitterDistance = 220;
             this.splitContainer1.TabIndex = 1;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(51, 66);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(148, 37);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Вакансии";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(16, 66);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(177, 37);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Соискатели";
-            // 
-            // richTextBoxForEnterVacancy
-            // 
-            this.richTextBoxForEnterVacancy.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.richTextBoxForEnterVacancy.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.richTextBoxForEnterVacancy.Location = new System.Drawing.Point(28, 172);
-            this.richTextBoxForEnterVacancy.Name = "richTextBoxForEnterVacancy";
-            this.richTextBoxForEnterVacancy.ReadOnly = true;
-            this.richTextBoxForEnterVacancy.Size = new System.Drawing.Size(203, 260);
-            this.richTextBoxForEnterVacancy.TabIndex = 4;
-            this.richTextBoxForEnterVacancy.Text = "";
-            this.richTextBoxForEnterVacancy.Visible = false;
-            // 
-            // richTextBoxForEnterApplicant
-            // 
-            this.richTextBoxForEnterApplicant.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.richTextBoxForEnterApplicant.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.richTextBoxForEnterApplicant.Location = new System.Drawing.Point(249, 172);
-            this.richTextBoxForEnterApplicant.Name = "richTextBoxForEnterApplicant";
-            this.richTextBoxForEnterApplicant.ReadOnly = true;
-            this.richTextBoxForEnterApplicant.Size = new System.Drawing.Size(203, 260);
-            this.richTextBoxForEnterApplicant.TabIndex = 5;
-            this.richTextBoxForEnterApplicant.Text = "";
-            this.richTextBoxForEnterApplicant.Visible = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(187, 438);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Visible = false;
-            // 
-            // labelForVacancy
-            // 
-            this.labelForVacancy.AutoSize = true;
-            this.labelForVacancy.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelForVacancy.Location = new System.Drawing.Point(30, 136);
-            this.labelForVacancy.Name = "labelForVacancy";
-            this.labelForVacancy.Size = new System.Drawing.Size(198, 30);
-            this.labelForVacancy.TabIndex = 7;
-            this.labelForVacancy.Text = "Текущая вакансия:";
-            this.labelForVacancy.Visible = false;
-            // 
-            // labelForApplicant
-            // 
-            this.labelForApplicant.AutoSize = true;
-            this.labelForApplicant.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelForApplicant.Location = new System.Drawing.Point(243, 136);
-            this.labelForApplicant.Name = "labelForApplicant";
-            this.labelForApplicant.Size = new System.Drawing.Size(222, 30);
-            this.labelForApplicant.TabIndex = 8;
-            this.labelForApplicant.Text = "Текущий соискатель:";
-            this.labelForApplicant.Visible = false;
-            // 
-            // textBoxForPromptUser
-            // 
-            this.textBoxForPromptUser.BackColor = System.Drawing.SystemColors.Control;
-            this.textBoxForPromptUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxForPromptUser.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxForPromptUser.Location = new System.Drawing.Point(187, 70);
-            this.textBoxForPromptUser.Name = "textBoxForPromptUser";
-            this.textBoxForPromptUser.Size = new System.Drawing.Size(100, 32);
-            this.textBoxForPromptUser.TabIndex = 9;
-            // 
             // listViewForVacancies
             // 
             this.listViewForVacancies.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -171,6 +89,17 @@
             this.listViewForVacancies.TabIndex = 3;
             this.listViewForVacancies.UseCompatibleStateImageBehavior = false;
             this.listViewForVacancies.View = System.Windows.Forms.View.List;
+            this.listViewForVacancies.SelectedIndexChanged += new System.EventHandler(this.listViewForVacancies_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(51, 66);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(148, 37);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Вакансии";
             // 
             // listViewForApplicants
             // 
@@ -184,18 +113,137 @@
             this.listViewForApplicants.UseCompatibleStateImageBehavior = false;
             this.listViewForApplicants.View = System.Windows.Forms.View.List;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(16, 66);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(177, 37);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Соискатели";
+            // 
+            // richTextBoxForCompareVacancy
+            // 
+            this.richTextBoxForCompareVacancy.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.richTextBoxForCompareVacancy.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.richTextBoxForCompareVacancy.Location = new System.Drawing.Point(12, 136);
+            this.richTextBoxForCompareVacancy.Name = "richTextBoxForCompareVacancy";
+            this.richTextBoxForCompareVacancy.ReadOnly = true;
+            this.richTextBoxForCompareVacancy.Size = new System.Drawing.Size(219, 309);
+            this.richTextBoxForCompareVacancy.TabIndex = 4;
+            this.richTextBoxForCompareVacancy.Text = "";
+            this.richTextBoxForCompareVacancy.Visible = false;
+            // 
+            // richTextBoxForCompareApplicant
+            // 
+            this.richTextBoxForCompareApplicant.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.richTextBoxForCompareApplicant.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.richTextBoxForCompareApplicant.Location = new System.Drawing.Point(248, 136);
+            this.richTextBoxForCompareApplicant.Name = "richTextBoxForCompareApplicant";
+            this.richTextBoxForCompareApplicant.ReadOnly = true;
+            this.richTextBoxForCompareApplicant.Size = new System.Drawing.Size(231, 309);
+            this.richTextBoxForCompareApplicant.TabIndex = 5;
+            this.richTextBoxForCompareApplicant.Text = "";
+            this.richTextBoxForCompareApplicant.Visible = false;
+            // 
+            // pictureBoxForComparison
+            // 
+            this.pictureBoxForComparison.Location = new System.Drawing.Point(208, 453);
+            this.pictureBoxForComparison.Name = "pictureBoxForComparison";
+            this.pictureBoxForComparison.Size = new System.Drawing.Size(64, 48);
+            this.pictureBoxForComparison.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxForComparison.TabIndex = 6;
+            this.pictureBoxForComparison.TabStop = false;
+            this.pictureBoxForComparison.Visible = false;
+            // 
+            // labelForVacancy
+            // 
+            this.labelForVacancy.AutoSize = true;
+            this.labelForVacancy.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelForVacancy.Location = new System.Drawing.Point(23, 95);
+            this.labelForVacancy.Name = "labelForVacancy";
+            this.labelForVacancy.Size = new System.Drawing.Size(198, 30);
+            this.labelForVacancy.TabIndex = 7;
+            this.labelForVacancy.Text = "Текущая вакансия:";
+            this.labelForVacancy.Visible = false;
+            // 
+            // labelForApplicant
+            // 
+            this.labelForApplicant.AutoSize = true;
+            this.labelForApplicant.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelForApplicant.Location = new System.Drawing.Point(250, 95);
+            this.labelForApplicant.Name = "labelForApplicant";
+            this.labelForApplicant.Size = new System.Drawing.Size(222, 30);
+            this.labelForApplicant.TabIndex = 8;
+            this.labelForApplicant.Text = "Текущий соискатель:";
+            this.labelForApplicant.Visible = false;
+            // 
+            // textBoxForPromptUser
+            // 
+            this.textBoxForPromptUser.BackColor = System.Drawing.SystemColors.Control;
+            this.textBoxForPromptUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxForPromptUser.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxForPromptUser.Location = new System.Drawing.Point(12, 64);
+            this.textBoxForPromptUser.Name = "textBoxForPromptUser";
+            this.textBoxForPromptUser.ReadOnly = true;
+            this.textBoxForPromptUser.Size = new System.Drawing.Size(467, 28);
+            this.textBoxForPromptUser.TabIndex = 9;
+            this.textBoxForPromptUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // buttonStartProcess
+            // 
+            this.buttonStartProcess.BackColor = System.Drawing.Color.Gold;
+            this.buttonStartProcess.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonStartProcess.Location = new System.Drawing.Point(12, 12);
+            this.buttonStartProcess.Name = "buttonStartProcess";
+            this.buttonStartProcess.Size = new System.Drawing.Size(169, 46);
+            this.buttonStartProcess.TabIndex = 10;
+            this.buttonStartProcess.Text = "Запуск";
+            this.buttonStartProcess.UseVisualStyleBackColor = false;
+            this.buttonStartProcess.Click += new System.EventHandler(this.buttonStartProcess_Click);
+            // 
+            // richTextBoxForEnterVacancy
+            // 
+            this.richTextBoxForEnterVacancy.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.richTextBoxForEnterVacancy.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBoxForEnterVacancy.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.richTextBoxForEnterVacancy.Location = new System.Drawing.Point(116, 136);
+            this.richTextBoxForEnterVacancy.Name = "richTextBoxForEnterVacancy";
+            this.richTextBoxForEnterVacancy.ReadOnly = true;
+            this.richTextBoxForEnterVacancy.Size = new System.Drawing.Size(219, 309);
+            this.richTextBoxForEnterVacancy.TabIndex = 11;
+            this.richTextBoxForEnterVacancy.Text = "";
+            this.richTextBoxForEnterVacancy.Visible = false;
+            // 
+            // richTextBoxForEnterApplicant
+            // 
+            this.richTextBoxForEnterApplicant.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.richTextBoxForEnterApplicant.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBoxForEnterApplicant.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.richTextBoxForEnterApplicant.Location = new System.Drawing.Point(137, 136);
+            this.richTextBoxForEnterApplicant.Name = "richTextBoxForEnterApplicant";
+            this.richTextBoxForEnterApplicant.ReadOnly = true;
+            this.richTextBoxForEnterApplicant.Size = new System.Drawing.Size(219, 309);
+            this.richTextBoxForEnterApplicant.TabIndex = 12;
+            this.richTextBoxForEnterApplicant.Text = "";
+            this.richTextBoxForEnterApplicant.Visible = false;
+            // 
             // FormView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(931, 513);
+            this.Controls.Add(this.richTextBoxForEnterApplicant);
+            this.Controls.Add(this.richTextBoxForEnterVacancy);
+            this.Controls.Add(this.buttonStartProcess);
             this.Controls.Add(this.textBoxForPromptUser);
             this.Controls.Add(this.labelForApplicant);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelForVacancy);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.richTextBoxForEnterApplicant);
-            this.Controls.Add(this.richTextBoxForEnterVacancy);
+            this.Controls.Add(this.pictureBoxForComparison);
+            this.Controls.Add(this.richTextBoxForCompareApplicant);
+            this.Controls.Add(this.richTextBoxForCompareVacancy);
             this.Controls.Add(this.splitContainer1);
             this.Name = "FormView";
             this.Text = "Биржа труда";
@@ -206,7 +254,7 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxForComparison)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,14 +266,17 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RichTextBox richTextBoxForEnterVacancy;
-        private System.Windows.Forms.RichTextBox richTextBoxForEnterApplicant;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.RichTextBox richTextBoxForCompareVacancy;
+        private System.Windows.Forms.RichTextBox richTextBoxForCompareApplicant;
+        private System.Windows.Forms.PictureBox pictureBoxForComparison;
         private System.Windows.Forms.Label labelForVacancy;
         private System.Windows.Forms.Label labelForApplicant;
         private System.Windows.Forms.TextBox textBoxForPromptUser;
         private System.Windows.Forms.ListView listViewForVacancies;
         private System.Windows.Forms.ListView listViewForApplicants;
+        private System.Windows.Forms.Button buttonStartProcess;
+        private System.Windows.Forms.RichTextBox richTextBoxForEnterVacancy;
+        private System.Windows.Forms.RichTextBox richTextBoxForEnterApplicant;
     }
 }
 

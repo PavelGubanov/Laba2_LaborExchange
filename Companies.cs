@@ -5,6 +5,7 @@ using System.Text;
 
 namespace Laba2_LaborExchange
 {
+    //Возможные типы работников на предприятиях
     public enum TypeWorker
     {
         FactoryWorker,
@@ -12,7 +13,7 @@ namespace Laba2_LaborExchange
         Trader,
         Scientist
     }
-
+    //Класс для создания рандомных названий компаний
     public class NamesCompanies
     {
         static readonly string[][] _names = new string[][] {
@@ -35,12 +36,18 @@ namespace Laba2_LaborExchange
             return Get(company.Workers);
         }
     }
+    //Абстрактный класс для предприятия
     public abstract class Company
     {
-        public string Name { get; protected set; }
-        public TypeWorker Workers { get; protected set; }
+        //Название компании
+        public string Name { get; protected set; } 
+        //Тип рабочих, которые могут работать на конкретном предприятии
+        public TypeWorker Workers { get; protected set; } 
+        //Создание полного имени предприятия с указанием его рода деятельности
+        public abstract string GetFullName();
     }
 
+    //Класс индустриального предприятия
     public class IndustrialCompany: Company
     {
         public IndustrialCompany(string name) 
@@ -53,12 +60,12 @@ namespace Laba2_LaborExchange
             Workers = TypeWorker.FactoryWorker;
             Name = NamesCompanies.Get(this);
         }
-        public override string ToString()
+        public override string GetFullName()
         {
-            return "Промышленная компания: " + Name + "\n";
+            return "Промышленная компания: " + Name;
         }
     }
-
+    //Класс строительного предприятия
     public class ConstructionCompany: Company
     {
         public ConstructionCompany(string name)
@@ -71,12 +78,12 @@ namespace Laba2_LaborExchange
             Workers = TypeWorker.Builder;
             Name = NamesCompanies.Get(this);
         }
-        public override string ToString()
+        public override string GetFullName()
         {
-            return "Строительная компания: " + Name + "\n";
+            return "Строительная компания: " + Name;
         }
     }
-
+    //Класс торгового предприятия
     public class TradeСompany: Company
     {
         public TradeСompany(string name)
@@ -89,12 +96,12 @@ namespace Laba2_LaborExchange
             Workers = TypeWorker.Trader;
             Name = NamesCompanies.Get(this);
         }
-        public override string ToString()
+        public override string GetFullName()
         {
-            return "Торговая компания: " + Name + "\n";
+            return "Торговая компания: " + Name;
         }
     }
-
+    //Класс научной компании
     public class ScientificCompany: Company
     {
         public ScientificCompany(string name)
@@ -107,9 +114,9 @@ namespace Laba2_LaborExchange
             Workers = TypeWorker.Scientist;
             Name = NamesCompanies.Get(this);
         }
-        public override string ToString()
+        public override string GetFullName()
         {
-            return "Научная компания: " + Name + "\n";
+            return "Научная компания: " + Name;
         }
     }
 }

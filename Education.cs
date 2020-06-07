@@ -4,18 +4,22 @@ using System.Text;
 
 namespace Laba2_LaborExchange
 {
+    //Возможные области образования
     public enum EducationAreas
     {
-        Technical,
-        Construction, 
-        Trade,
-        Scientific
+        Technical, //техническое
+        Construction, //строительное
+        Trade, //торговое
+        Scientific //научное
     }
+    //Интерфейс для образования
     public interface IEducation
     {
         EducationAreas GetEducationArea();
+        //Возвращает всю необходимую информацию об образовании
         string GetEducationInfo();
     }
+    //Класс для хранения информации об образовании соискателя
     public class EducationForApplicant: IEducation
     {
         EducationAreas _educationArea;
@@ -71,7 +75,6 @@ namespace Laba2_LaborExchange
                     }
             }
         }
-
         public string GetEducationInfo()
         {
             string tmp = "учебное заведение - " + _institution + ", " +
@@ -80,7 +83,7 @@ namespace Laba2_LaborExchange
             return tmp;
         }
     }
-
+    //Класс для хранения информации об образовании, которое требуется в вакансии
     public class EducationForVacancy: IEducation
     {
         EducationAreas _educationArea;
@@ -118,7 +121,6 @@ namespace Laba2_LaborExchange
                     tmp += "научное";
                     break;
             }
-            tmp += "\n";
             return tmp;
         }
     }

@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace Laba2_LaborExchange
 {
+    //Интерфейс для отображения работы модели биржи труда
     public interface IView
     {
+        //Добавление новой вакансии на биржу
         void AddVacancy(Vacancy vacancy);
+        //Поступление новой анкеты соискателя на биржу
         void AddApplicant(Applicant applicant);
-        void SearchVacancyForApplicant();   
+        //Подбор вакансии для соискателя
+        void SearchVacancyForApplicant(Vacancy vacancy, Applicant applicant);   
     }
 }

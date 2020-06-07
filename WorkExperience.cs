@@ -4,10 +4,11 @@ using System.Text;
 
 namespace Laba2_LaborExchange
 {
+    //Класс для описания конкретного места работы
     public class Job
     {
-        string _nameCompany;
-        int _workingYears;
+        string _nameCompany; //название компании
+        int _workingYears; //количество отработанных лет
 
         public int WorkingYears { get { return _workingYears; } }
 
@@ -22,12 +23,15 @@ namespace Laba2_LaborExchange
             return  _nameCompany + " - " + _workingYears + "\n";
         }
     }
-
+    //Интерфейс для опыта работы
     public interface IWorkExperience
     {
+        //Общее количество отработанных лет
         int GetWorkingYears();
+        //Возвращает всю необходимую информацию об опыте работы
         string GetInfo();
     }
+    //Класс для хранения информации об опыте работы соискателя
     public class WorkExperienceForApplicant: IWorkExperience
     {
         List<Job> jobs;
@@ -40,7 +44,7 @@ namespace Laba2_LaborExchange
         public WorkExperienceForApplicant(TypeWorker worker): this()
         {
             Random random = new Random((int)DateTime.Now.Ticks);
-            if (random.Next(0,1) == 1)
+            if (random.Next(0,2) == 1)
             {
                 AddJob(new Job(NamesCompanies.Get(worker), random.Next(1, 6)));
             }
@@ -78,7 +82,7 @@ namespace Laba2_LaborExchange
             }
         }
     }
-
+    //Класс для хранения информации о необходимом опыте работы для конкретной вакансии
     public class WorkExperienceForVacancy: IWorkExperience
     {
         int _years;
@@ -102,11 +106,11 @@ namespace Laba2_LaborExchange
         {
             if (_years == 0)
             {
-                return "Опыт работы - не требуется\n";
+                return "Опыт работы - не требуется";
             }
             else
             {
-                return "Требуемый опыт работы - " + _years + " и более\n";
+                return "Требуемый опыт работы - " + _years + " и более";
             }
         }
     }

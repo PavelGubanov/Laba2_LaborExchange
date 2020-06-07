@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Laba2_LaborExchange
 {
+    //Класс для получения названий конкретных вакансий для демонстрации работы биржи труда
     public class NamesVacancies
     {
         static readonly string[] _names = new string[] {
@@ -17,13 +18,19 @@ namespace Laba2_LaborExchange
             return _names[(int)company.Workers];
         }
     }
+    //Класс вакансии
     public class Vacancy
     {
+        //Компания, которой принадлежит вакансия
         Company _company;
+        //Информация о требуемом опыте работы
         IWorkExperience _workExperience;
+        //Информация о необходимом образовании
         IEducation _education;
+        //Название
         string _name;
 
+        public Company Company => _company;
         public string Name => _name;
         public IEducation Education => _education;
         public IWorkExperience WorkExperience => _workExperience;
@@ -45,7 +52,7 @@ namespace Laba2_LaborExchange
                     _company = new ScientificCompany();
                     break;
             }
-            _name = NamesCompanies.Get(_company);
+            _name = NamesVacancies.Get(_company);
             _workExperience = new WorkExperienceForVacancy();
             _education = new EducationForVacancy(worker);
         }
@@ -59,8 +66,8 @@ namespace Laba2_LaborExchange
 
         public override string ToString()
         {
-            string tmp = Name + "\n" + _company +
-                         _education.GetEducationInfo() + _workExperience;
+            string tmp = Name + "\n\n" + _company.GetFullName() + "\n\n" +
+                         _education.GetEducationInfo() + "\n\n" + _workExperience.GetInfo();
             return tmp;
         }
     }
